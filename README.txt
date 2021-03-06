@@ -85,6 +85,11 @@ document ids for the query and save the query results into the output file.
     in the case where the root query is a NOT query, or when it is evaluated as part of an operand in an OR operator.
     - The NOT operator is evaluated using {all_doc_ids} - {matches}
 
+
+Misc:
+We initially used python set intersection, union, and difference operators for the merging, which was faster (~2x)
+compared to the iterative merge implemented in this submitted version, even with skip lists.
+
 == Files included with this submission ==
 
 List the files in your submission here and provide a short 1 line
